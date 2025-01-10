@@ -13,33 +13,10 @@ export const GENERATE_SLUG_FROM_TITLE = true
 export const TRANSITION_API = true
 export const SHOP_ENABLED = false; // 控制商店功能开关
 
-const blogSchema = z.object({
-    title: z.string(),
-    description: z.string(),
-    pubDate: z.coerce.date(),
-    updatedDate: z.string().optional(),
-    heroImage: z.string().optional(),
-    badge: z.string().optional(),
-    tags: z.array(z.string()).refine(items => new Set(items).size === items.length, {
-        message: 'tags must be unique',
-    }).optional(),
-});
-
-const storeSchema = z.object({
-    title: z.string(),
-    description: z.string(),
-    custom_link_label: z.string(),
-    custom_link: z.string().optional(),
-    updatedDate: z.coerce.date(),
-    pricing: z.string().optional(),
-    oldPricing: z.string().optional(),
-    badge: z.string().optional(),
-    checkoutUrl: z.string().optional(),
-    heroImage: z.string().optional(),
-});
-
-export type BlogSchema = z.infer<typeof blogSchema>;
-export type StoreSchema = z.infer<typeof storeSchema>;
+import { blogSchema } from './content/blogSchema';
+import { storeSchema } from './content/storeSchema';
+import type { BlogSchema } from './content/blogSchema';
+import type { StoreSchema } from './content/storeSchema';
 
 const blogCollection = defineCollection({ schema: blogSchema });
 const storeCollection = defineCollection({ schema: storeSchema });
