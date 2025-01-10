@@ -2,6 +2,22 @@
 import { CollectionEntry, getCollection } from "astro:content";
 import { StoreSchema } from "../../content/config";
 import StoreItemLayout from "../../layouts/StoreItemLayout.astro";
+import { SHOP_ENABLED } from "../../config";
+
+if (!SHOP_ENABLED) {
+  return (
+    <StoreItemLayout
+      title="商店已关闭"
+      description="我们暂时关闭了在线商店功能"
+      heroImage="/public/itemPreview.webp"
+    >
+      <div class="text-center py-20">
+        <h1 class="text-2xl font-bold mb-4">商店功能已关闭</h1>
+        <p class="text-gray-600">我们暂时关闭了在线商店功能，敬请期待后续更新。</p>
+      </div>
+    </StoreItemLayout>
+  );
+}
 
 export async function getStaticPaths() {
   const itemEntries = await getCollection("store");
