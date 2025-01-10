@@ -1,7 +1,7 @@
-// Place any global data in this file.
-// You can import this data from anywhere in your site by using the `import` keyword.
+// 将任何全局数据放在此文件中。
+// 你可以使用 `import` 关键字从站点的任何位置导入此数据。
 
-export const SITE_TITLE = 'Astrofy | Personal Portfolio Website Template';
-export const SITE_DESCRIPTION = 'Astrofy is a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS. Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed.';
+export const SITE_TITLE = 'CHACAT | 个人作品集';
+export const SITE_DESCRIPTION = '网站会展示我的作品，技能，以及我的职业经历。';
 export const GENERATE_SLUG_FROM_TITLE = true
 export const TRANSITION_API = true
