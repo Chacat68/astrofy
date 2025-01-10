@@ -4,7 +4,9 @@ import BaseLayout from "./BaseLayout.astro";
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
 
-export interface Props extends StoreSchema {}
+export interface Props extends StoreSchema {
+  children?: any;
+}
 
 const {
   title,

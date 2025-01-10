@@ -18,6 +18,8 @@ import { storeSchema } from './content/storeSchema';
 import type { BlogSchema } from './content/blogSchema';
 import type { StoreSchema } from './content/storeSchema';
 
+export type { StoreSchema };
+
 const blogCollection = defineCollection({ schema: blogSchema });
 const storeCollection = defineCollection({ schema: storeSchema });
 

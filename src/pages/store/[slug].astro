@@ -7,7 +7,7 @@ import { SHOP_ENABLED } from "../../config";
 
 if (!SHOP_ENABLED) {
   return (
-    <StoreItemLayout
+    (<StoreItemLayout
       title="商店已关闭"
       description="我们暂时关闭了在线商店功能"
       heroImage="/public/itemPreview.webp"
@@ -16,7 +16,7 @@ if (!SHOP_ENABLED) {
         <h1 class="text-2xl font-bold mb-4">商店功能已关闭</h1>
         <p class="text-gray-600">我们暂时关闭了在线商店功能，敬请期待后续更新。</p>
       </div>
-    </StoreItemLayout>
+    </StoreItemLayout>)
   );
 }
 
